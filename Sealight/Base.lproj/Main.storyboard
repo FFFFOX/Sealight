@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="wwt-nk-Sfz">
+            <objects>
+                <viewController id="u3a-Nj-ev0" customClass="GameViewController" customModule="SealightOrigin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZR-pt-dZm">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BnD-6L-Te9">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </sceneKitView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.22822445629999999" blue="0.48591148849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BnD-6L-Te9" firstAttribute="top" secondItem="pfN-dH-CmR" secondAttribute="top" id="2x1-4f-Jvc"/>
+                            <constraint firstAttribute="trailing" secondItem="BnD-6L-Te9" secondAttribute="trailing" id="Mr8-FB-f1c"/>
+                            <constraint firstItem="BnD-6L-Te9" firstAttribute="leading" secondItem="aZR-pt-dZm" secondAttribute="leading" id="X0s-rN-Uhp"/>
+                            <constraint firstAttribute="bottom" secondItem="BnD-6L-Te9" secondAttribute="bottom" id="zMN-2b-jVg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pfN-dH-CmR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="axQ-OB-KYg"/>
+                    <connections>
+                        <outlet property="scnView" destination="BnD-6L-Te9" id="L1m-FQ-Lj5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1h-Qp-uxc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="-39"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="SealightOrigin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainViewBg" translatesAutoresizingMaskIntoConstraints="NO" id="Wzl-Ob-f5J">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jN-K9-Pge">
+                                <rect key="frame" x="0.0" y="0.0" width="448" height="414"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hho-jF-e9R" customClass="MainViewButton" customModule="SealightOrigin" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="28" width="388" height="357"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="RVI-a5-lXh"/>
+                                            <constraint firstAttribute="width" secondItem="Hho-jF-e9R" secondAttribute="height" multiplier="1:1" id="W7x-S3-WUI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="知识">
+                                            <color key="titleColor" red="0.56032687430000006" green="0.68851602079999996" blue="0.80103462930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="highlight"/>
+                                        <connections>
+                                            <action selector="clickKnowledgeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVa-fA-gsn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hho-jF-e9R" firstAttribute="centerY" secondItem="3jN-K9-Pge" secondAttribute="centerY" id="nrJ-mr-3cx"/>
+                                    <constraint firstItem="Hho-jF-e9R" firstAttribute="centerX" secondItem="3jN-K9-Pge" secondAttribute="centerX" id="xXL-oP-T7j"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1q1-9h-NPM">
+                                <rect key="frame" x="448" y="0.0" width="448" height="414"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61J-qT-BHC" customClass="MainViewButton" customModule="SealightOrigin" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="28" width="388" height="357"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="61J-qT-BHC" secondAttribute="height" multiplier="1:1" id="5aV-3a-anW"/>
+                                            <constraint firstAttribute="width" constant="350" id="WA0-J3-MFR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <state key="normal" title="游戏">
+                                            <color key="titleColor" red="0.56032687430000006" green="0.68851602079999996" blue="0.80103462930000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="highlight"/>
+                                        <connections>
+                                            <action selector="clickGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VuY-zw-tZU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="61J-qT-BHC" firstAttribute="centerY" secondItem="1q1-9h-NPM" secondAttribute="centerY" id="VbB-vL-M0n"/>
+                                    <constraint firstItem="61J-qT-BHC" firstAttribute="centerX" secondItem="1q1-9h-NPM" secondAttribute="centerX" id="taq-5q-egd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3jN-K9-Pge" secondAttribute="bottom" id="IsG-Hd-N6e"/>
+                            <constraint firstItem="Wzl-Ob-f5J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JDB-zg-4In"/>
+                            <constraint firstItem="Wzl-Ob-f5J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O4x-yu-erE"/>
+                            <constraint firstAttribute="bottom" secondItem="1q1-9h-NPM" secondAttribute="bottom" id="PkC-zv-MxK"/>
+                            <constraint firstItem="1q1-9h-NPM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="Tlm-XH-pnS"/>
+                            <constraint firstAttribute="trailing" secondItem="Wzl-Ob-f5J" secondAttribute="trailing" id="YkS-qQ-Cr7"/>
+                            <constraint firstItem="3jN-K9-Pge" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="b7R-1L-uEl"/>
+                            <constraint firstItem="3jN-K9-Pge" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g9R-fL-UDe"/>
+                            <constraint firstAttribute="bottom" secondItem="Wzl-Ob-f5J" secondAttribute="bottom" id="nBe-Yq-0Cf"/>
+                            <constraint firstItem="1q1-9h-NPM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sro-dl-mpG"/>
+                            <constraint firstItem="3jN-K9-Pge" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wug-Ce-gyc"/>
+                            <constraint firstAttribute="trailing" secondItem="1q1-9h-NPM" secondAttribute="trailing" id="xOk-CD-jRV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImg" destination="Wzl-Ob-f5J" id="sJt-Cg-yHj"/>
+                        <outlet property="gameButton" destination="61J-qT-BHC" id="KR9-6z-AQF"/>
+                        <outlet property="knowledgeButton" destination="Hho-jF-e9R" id="XXd-1h-qV9"/>
+                        <segue destination="u3a-Nj-ev0" kind="show" identifier="gameView" id="8VD-VF-JaO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.91964285714286" y="-39.130434782608695"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MainViewBg" width="972" height="450"/>
+        <image name="highlight" width="1000" height="1000"/>
+    </resources>
+</document>
